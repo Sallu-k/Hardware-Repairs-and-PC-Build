@@ -1,39 +1,89 @@
 # Hardware Repairs & PC Builds
 
-A photo log of freelance electronics repair and PC-building work — board-level diagnosis, cleaning, rework, component replacement, and full custom builds. Ongoing since 2024.
+Board-level diagnosis, rework and thermal service on consumer electronics, plus custom PC builds.
+Ongoing since 2024 — mostly for friends, mostly out of interest.
 
-This isn't a code project; it's documentation of hands-on hardware work: fault-finding with a multimeter and oscilloscope, soldering and rework, thermal cleaning/repasting, and assembly.
+No code here. This repo documents the other half of electronics: finding a fault in something you
+didn't design, and fixing it without a schematic.
 
 ---
 
-## Selected work
+## Xbox Series X controller — repair + TMR joystick upgrade
 
-### Xbox Series X controller — repair + TMR joystick upgrade
-Opened up an Xbox Series X controller, repaired it, and upgraded the analog sticks to **TMR (tunnelling-magnetoresistance) joystick modules** — contactless, magnetic-sensing sticks that don't wear like the stock potentiometer sticks, eliminating stick drift. Full teardown, board work, and reassembly.
-`docs/images/controller_xbox_before.jpeg` · `controller_xbox_before_2.jpeg` · `controller_xbox_after_upgrade.jpeg` · `controller_xbox_after_upgrade_2.jpeg`
+The most involved job here. The controller had drifting analog sticks — the standard failure of
+potentiometer-based joysticks, where the resistive track wears and the neutral position stops
+reading as neutral.
 
-### GPU repair & service — NVIDIA GTX 1080 Ti
-Teardown, deep clean, and repair of a high-end GPU: dust/debris removal, thermal-paste and pad replacement, and inspection for board-level faults.
-`docs/images/gpu_before_cleaning.jpeg` · `docs/images/gpu_gtx1080ti_repair.jpeg`
+Rather than replace like-for-like and wait for the same failure again, I swapped in **TMR
+(tunnelling magnetoresistance) joystick modules**. These sense stick position magnetically instead
+of through a wiper on a carbon track. Nothing touches, so nothing wears — which removes the cause
+of drift rather than resetting its clock.
 
-### Keyboard repair
-Diagnosis and repair of a non-working keyboard — before and after.
-`docs/images/keyboard_before.jpeg` · `docs/images/keyboard_after.jpeg`
+![Controller teardown with stock potentiometer sticks](docs/images/xbox_teardown_stock_sticks.jpeg)
+*Teardown. Stock potentiometer sticks desoldered from the main board.*
 
-### Custom desktop PC build
-Full build from components and OS setup (including Linux).
-`docs/images/custom_pc_build.jpeg`
+![TMR joystick modules installed](docs/images/xbox_tmr_modules_installed.jpeg)
+*TMR modules soldered in — the orange units. Both boards shown before reassembly.*
+
+![Controller reassembled and working](docs/images/xbox_reassembled.jpeg)
+*Reassembled and tested.*
+
+**Work involved:** full teardown, desoldering the original stick modules without lifting pads,
+fitting and soldering the replacements, reassembly, and verifying centring and full-range travel.
+
+---
+
+## NVIDIA GTX 1080 Ti — service and inspection
+
+Teardown, deep clean, thermal-paste and thermal-pad replacement, and board-level inspection for
+faults. Thermal pads harden and lose conductivity over time, so on a card of this age the VRM and
+memory pads matter as much as the die paste.
+
+![GPU before cleaning](docs/images/gpu_before_cleaning.jpeg)
+*As received.*
+
+![GPU after service](docs/images/gpu_gtx1080ti_repair.jpeg)
+*Stripped down for cleaning and repaste.*
+
+---
+
+## Keyboard repair
+
+A non-working keyboard, diagnosed and brought back.
+
+<table>
+<tr>
+<td><img src="docs/images/keyboard_before.jpeg" width="100%"></td>
+<td><img src="docs/images/keyboard_after.jpeg" width="100%"></td>
+</tr>
+<tr><td align="center"><em>Before</em></td><td align="center"><em>After</em></td></tr>
+</table>
+
+---
+
+## Custom desktop PC build
+
+Full build from selected components, assembled and commissioned, including Linux setup.
+
+![Custom PC build](docs/images/custom_pc_build.jpeg)
 
 ---
 
 ## What this work involves
 
-- **Board-level fault isolation** with a multimeter and oscilloscope
-- **Soldering & rework** — through-hole and surface-mount, component replacement
-- **Thermal service** — cleaning, repasting, pad replacement on GPUs/laptops
-- **PC assembly** — component selection, building, and OS/driver setup
-- **Controller mods** — TMR / hall-effect joystick upgrades to eliminate stick drift
+| | |
+|---|---|
+| **Fault isolation** | Multimeter and oscilloscope, working without schematics |
+| **Soldering & rework** | Through-hole and surface-mount, component-level replacement |
+| **Thermal service** | Teardown, cleaning, repaste, thermal-pad replacement |
+| **Assembly** | Component selection, building, OS and driver setup |
 
-> 10+ consumer devices diagnosed and repaired at board level to date: PCs, gaming controllers, displays and home electronics.
+**10+ consumer devices** repaired at board level so far — PCs, gaming controllers, displays and
+home electronics.
 
-*More images will be added as new jobs come in.*
+Not every job succeeds. One recent attempt didn't come back, which is part of the work: some
+faults aren't economically or practically recoverable, and knowing when to stop is a skill too.
+
+---
+
+*Ongoing. New jobs get added as they come in.*
